@@ -20,7 +20,8 @@ public class ConsoleProgress implements Runnable {
         try {
             Thread progress = new Thread(new ConsoleProgress());
             progress.start();
-            Thread.sleep(10000); /* симулируем выполнение параллельной задачи в течение 10 секунд. */
+            /* симулируем выполнение параллельной задачи в течение 10 секунд. */
+            Thread.sleep(10000);
             progress.interrupt();
         } catch (InterruptedException e) {
             e.printStackTrace();
